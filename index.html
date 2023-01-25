@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hw05-main page</title>
+    <title>hw06-main page</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -356,58 +356,46 @@
           <ul class="customers-list">
             <li class="customers-item">
               <a class="customers-logo" href="#">
-           
                 <svg class="customers-icon">
                   <use href="./images/icons.svg#icon-logo-yaco"></use>
                 </svg>
-           
               </a>
             </li>
             <li class="customers-item">
               <a class="customers-logo" href="#">
-            
                 <svg class="customers-icon">
                   <use href="./images/icons.svg#icon-logo-company"></use>
                 </svg>
-           
               </a>
             </li>
             <li class="customers-item">
               <a class="customers-logo" href="#">
-              
                 <svg class="customers-icon">
                   <use href="./images/icons.svg#icon-logo-company2"></use>
                 </svg>
-             
-              </a>
-            </li>
-            <li class="customers-item">
-             <a class="customers-logo" href="#">
-            
-                <svg class="customers-icon">
-                  <use href="./images/icons.svg#icon-logo-foster-peters"></use>
-                </svg>
-            
               </a>
             </li>
             <li class="customers-item">
               <a class="customers-logo" href="#">
-             
                 <svg class="customers-icon">
-                  <use href="./images/icons.svg#icon-logo-brand"></use>
+                  <use href="./images/icons.svg#icon-logo-foster-peters"></use>
                 </svg>
-             
               </a>
             </li>
             <li class="customers-item">
-             <a class="customers-logo" href="#">
-              
+              <a class="customers-logo" href="#">
+                <svg class="customers-icon">
+                  <use href="./images/icons.svg#icon-logo-brand"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="customers-item">
+              <a class="customers-logo" href="#">
                 <svg class="customers-icon">
                   <use
                     href="./images/icons.svg#icon-logo-company-tagline"
                   ></use>
                 </svg>
-            
               </a>
             </li>
           </ul>
@@ -472,13 +460,104 @@
               </li>
             </ul>
           </div>
+          <div class="footer-news">
+            <h4 class="footer-news__title">zapisz się do newslettera</h4>
+            <form class="footer-news__form" method="GET" name="signupForm">
+              <!-- <label> -->
+              <input
+                class="footer-news__input"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+              />
+              <!-- </label> -->
+              <button class="footer-button" type="submit">
+                Zapisz się
+                <svg class="footer-send__icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <!-- <button class="close-window" type="button" data-modal-close>&#x2715</button> -->
-        <button class="close-window" type="button" data-modal-close>&#x2715</button>
+        <h4 class="modal-title">Zostaw swoje dane w formularzu poniżej</h4>
+        <button class="close-window" type="button" data-modal-close>
+          <svg width="17" height="17">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button> 
+        <form class="modal-form" method="GET" name="contactForm">
+          <ul class="modal-windows">
+            <li class="modal-window">
+              <label class="modal-label" for="user-name">Imię</label>
+              <input
+                class="modal-input"
+                type="text"
+                name="username"
+                id="user-name"
+              />
+              <svg class="modal-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-person-black"></use>
+              </svg>
+            </li>
+
+            <li class="modal-window">
+              <label class="modal-label" for="user-phone">Telefon</label>
+              <input
+                class="modal-input"
+                type="phone"
+                name="phone"
+                id="user-phone"
+              />
+              <svg class="modal-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-phone-black"></use>
+              </svg>
+            </li>
+
+            <li class="modal-window">
+              <label class="modal-label" for="user-email">Email</label>
+              <input
+                class="modal-input"
+                type="email"
+                name="email"
+                id="user-email"
+              />
+              <svg class="modal-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-email-black"></use>
+              </svg>
+            </li>
+
+            <li class="modal-window">
+              <label class="modal-label" for="user-feedback">Komentarz</label>
+              <textarea
+              class="modal-textarea"
+                name="feedback"
+                placeholder="Wprowadź tekst"
+              ></textarea>
+            </li>
+            <li class="modal-window">
+              <label class="modal-label__choice" for="confirm">Oświadczam iż akceptuję
+                <a class="modal-label__link" href="#" target="_blank">Regulamin</a>
+                i <a class="modal-label__link" href="#" target="_blank">Politykę prywatności</a>
+              <svg class="modal-icon" width="11" height="8">
+               <use href="./images/icons.svg#icon-checkbox"></use>
+             </svg>
+             <input
+               class="modal-input__choice"
+               type="checkbox"
+               name="confirm"
+               id="confirm"
+               value="accepted"
+             />
+              </label>
+            </li>
+          </ul>
+            <button class="modal-button" type="submit">Wyślij</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
